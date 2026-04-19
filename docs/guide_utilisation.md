@@ -55,6 +55,8 @@ python3 scripts/audit_android.py --output reports/mon_rapport.json
 ## Outils complementaires
 
 - Pour preparer un flash fastboot avec verification de compatibilite, voir [docs/guide_flash.md](guide_flash.md).
+- Pour auditer un appareil en mode fastboot, voir [docs/guide_fastboot.md](guide_fastboot.md).
+- Pour sauvegarder des partitions lisibles avant reflash, voir [docs/guide_backup.md](guide_backup.md).
 
 ---
 

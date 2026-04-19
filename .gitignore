@@ -19,6 +19,13 @@ Thumbs.db
 # Rapports generes
 reports/*.json
 
+# Sauvegardes locales
+backups/**
+!backups/.gitkeep
+
+# Manifestes generes localement
+firmware/generated_*.json
+
 # Autres
 .idea/
 .vscode/

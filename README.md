@@ -12,6 +12,7 @@ Ce projet permet de collecter des informations système sur un appareil Android 
 - `docs/` : documentation technique
 - `reports/` : rapports JSON generes par les scripts
 - `firmware/` : manifestes et images locales pour la preparation de flash
+- `backups/` : sauvegardes locales generees avant reflash
 
 ## Utilisation
 
@@ -43,3 +44,23 @@ python3 scripts/flash_android.py firmware/manifest.example.json
 ```
 
 Le script est en simulation par defaut et bloque les incompatibilites de produit.
+
+## Etapes preparatoires
+
+Audit fastboot du bootloader :
+
+```bash
+python3 scripts/audit_fastboot.py
+```
+
+Generation d'un manifeste firmware a partir d'un rapport :
+
+```bash
+python3 scripts/generate_firmware_manifest.py reports/latest_audit.json
+```
+
+Preparation d'un plan de sauvegarde des partitions lisibles :
+
+```bash
+python3 scripts/backup_partitions.py firmware/backup_plan.example.json
+```

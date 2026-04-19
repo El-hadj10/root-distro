@@ -1,0 +1,23 @@
+{
+  "name": "SM-S928B read-only backup",
+  "device": {
+    "brand": "samsung",
+    "model": "SM-S928B",
+    "product": "e3q"
+  },
+  "partitions": [
+    {
+      "name": "boot",
+      "source": "/dev/block/by-name/boot"
+    },
+    {
+      "name": "vendor_boot",
+      "source": "/dev/block/by-name/vendor_boot"
+    },
+    {
+      "name": "recovery",
+      "source": "/dev/block/by-name/recovery",
+      "optional": true
+    }
+  ]
+}

@@ -25,12 +25,20 @@ CRITICAL_PARTITIONS = {
 
 
 def run_fastboot_command(args):
-    result = subprocess.run(
-        ["fastboot"] + args,
-        capture_output=True,
-        text=True,
-        check=False,
-    )
+    try:
+        result = subprocess.run(
+            ["fastboot"] + args,
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+    except FileNotFoundError:
+        return {
+            "ok": False,
+            "stdout": "",
+            "stderr": "La commande fastboot est introuvable. Installez android-tools-fastboot.",
+            "returncode": 127,
+        }
     return {
         "ok": result.returncode == 0,
         "stdout": result.stdout.strip(),
