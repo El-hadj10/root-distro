@@ -52,6 +52,10 @@ python3 scripts/audit_android.py --output reports/mon_rapport.json
 - Si aucun appareil n'apparait, verifiez le cable USB et le mode de connexion.
 - Si `adb` n'est pas trouve, assurez-vous qu'il est bien installe et disponible dans le PATH.
 
+## Outils complementaires
+
+- Pour preparer un flash fastboot avec verification de compatibilite, voir [docs/guide_flash.md](guide_flash.md).
+
 ---
 
 Pour toute contribution, voir le README principal.

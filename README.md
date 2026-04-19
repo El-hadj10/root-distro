@@ -11,6 +11,7 @@ Ce projet permet de collecter des informations système sur un appareil Android 
 - `scripts/` : scripts d’audit (Python, bash)
 - `docs/` : documentation technique
 - `reports/` : rapports JSON generes par les scripts
+- `firmware/` : manifestes et images locales pour la preparation de flash
 
 ## Utilisation
 
@@ -32,3 +33,13 @@ Pour auditer un appareil precis :
 ```bash
 python3 scripts/audit_android.py --serial NUMERO_DE_SERIE
 ```
+
+## Flash securise
+
+Un second script prepare un plan de flash fastboot avec validation stricte du produit cible :
+
+```bash
+python3 scripts/flash_android.py firmware/manifest.example.json
+```
+
+Le script est en simulation par defaut et bloque les incompatibilites de produit.

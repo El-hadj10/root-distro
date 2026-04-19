@@ -1,0 +1,25 @@
+{
+  "name": "Samsung SM-S928B Recovery Bundle",
+  "device": {
+    "brand": "samsung",
+    "model": "SM-S928B",
+    "product": "e3q"
+  },
+  "images": [
+    {
+      "partition": "boot",
+      "file": "images/boot.img",
+      "critical": true
+    },
+    {
+      "partition": "vendor_boot",
+      "file": "images/vendor_boot.img",
+      "critical": true
+    },
+    {
+      "partition": "recovery",
+      "file": "images/recovery.img",
+      "critical": true
+    }
+  ]
+}
